@@ -1,0 +1,219 @@
+/**
+ * Pagination 组件样式
+ * 完全复刻《三角洲行动》官网分页样式
+ * 使用原始的rem单位
+ */
+
+/* ========== 分页容器 ========== */
+.news_page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== 上一页/下一页按钮 ========== */
+.news_page a {
+  margin: 0 0.4rem;
+  width: 4.16rem;
+  height: 0.9rem;
+  background: url(../../assets/news_page.png) no-repeat left/auto 100%;
+}
+
+.news_page a.page_prev {
+  background: url(../../assets/news_page.png) no-repeat left/auto 100%;
+}
+
+.news_page a.page_next {
+  background: url(../../assets/news_page.png) no-repeat right/auto 100%;
+}
+
+.page_prev:hover,
+.page_next:hover {
+  opacity: 0.8;
+}
+
+/* ========== 页码容器 ========== */
+.page_a {
+  margin: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+/* ========== 页码数字 - 纯数字，无背景 ========== */
+.page_a span {
+  color: #e1e1e1;
+  font-size: 0.4rem;
+  margin: 0 0.1rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: none;
+  padding: 0.05rem 0.08rem;
+  position: relative;
+}
+
+.page_a span:hover {
+  color: #0ff796;
+}
+
+/* ========== 当前激活页码 - 绿色 + 短下划线 ========== */
+.page_a span.on {
+  color: #0ff796;
+  text-decoration: underline;
+  text-underline-offset: 0.1rem;
+}
+
+/* 覆盖text-decoration，使用伪元素实现固定宽度下划线 */
+.news_page .page_a span.on {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.page_a span.on::after {
+  content: '';
+  position: absolute;
+  bottom: 0.03rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.2rem;  /* 固定宽度 */
+  height: 0.02rem;
+  background: #0ff796;
+}
+
+/* ========== 快速跳转区域 ========== */
+.page_change {
+  display: flex;
+  align-items: center;
+  color: #e1e1e1;
+  font-size: 0.4rem;
+  margin: 0 0.1rem;
+  margin-left: 0.5rem;
+}
+
+.page_change p {
+  margin: 0;
+  color: #e1e1e1;
+  font-size: 0.4rem;
+  white-space: nowrap;
+}
+
+.page_change input {
+  background: url(../../assets/news_pagenum.png) no-repeat center/100%;
+  width: 1.59rem;
+  height: 0.9rem;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  color: #e1e1e1;
+  border: none;
+  padding: 0 0.1rem;
+  margin: 0 0.1rem;
+  text-align: center;
+}
+
+/* ========== 跳转按钮 - 精确尺寸 ========== */
+.page_change .page_num {
+  background: url(../../assets/news_pagenum2.png) no-repeat center/100%;
+  width: 0.44rem;
+  height: 0.34rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.page_change .page_num:hover {
+  opacity: 0.8;
+}
+
+/* 覆盖样式确保一致性 */
+.page .page_change .page_num,
+.news_page .page_change .page_num {
+  background: url(../../assets/news_pagenum2.png) no-repeat center/100%;
+  width: 0.44rem;
+  height: 0.34rem;
+}
+
+.news_page .page_a span {
+  color: #e1e1e1 !important;
+  font-size: 0.4rem !important;
+  text-decoration: none !important;
+}
+
+.news_page .page_a span.on {
+  color: #0ff796 !important;
+}
+
+/* ========== 响应式 - Medium (<=1024px) ========== */
+html.medium .news_page a {
+  margin: 0 0.32rem;
+  width: 3.33rem;
+  height: 0.72rem;
+}
+
+html.medium .page_a {
+  margin: 0 0.24rem;
+}
+
+html.medium .page_a span {
+  font-size: 0.32rem;
+  margin: 0 0.08rem;
+}
+
+html.medium .page_change {
+  font-size: 0.32rem;
+  margin-left: 0.4rem;
+}
+
+html.medium .page_change p {
+  font-size: 0.32rem;
+}
+
+html.medium .page_change input {
+  width: 1.27rem;
+  height: 0.72rem;
+}
+
+html.medium .page_change .page_num {
+  width: 0.35rem;
+  height: 0.27rem;
+}
+
+/* ========== 响应式 - Small (<=750px) ========== */
+html.small .news_page a {
+  margin: 0 0.26rem;
+  width: 2.66rem;
+  height: 0.58rem;
+}
+
+html.small .page_a {
+  margin: 0 0.19rem;
+}
+
+html.small .page_a span {
+  font-size: 0.26rem;
+  margin: 0 0.06rem;
+}
+
+html.small .page_change {
+  font-size: 0.26rem;
+  margin-left: 0.32rem;
+}
+
+html.small .page_change p {
+  font-size: 0.26rem;
+}
+
+html.small .page_change input {
+  width: 1.02rem;
+  height: 0.58rem;
+}
+
+html.small .page_change .page_num {
+  width: 0.28rem;
+  height: 0.22rem;
+}

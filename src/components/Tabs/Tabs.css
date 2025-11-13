@@ -1,0 +1,137 @@
+/**
+ * Tabs 标签页组件样式
+ * 完全复刻《三角洲行动》官网标签页样式
+ */
+
+/* ========== 标签页容器 ========== */
+.df-tabs {
+  width: 100%;
+}
+
+.p2_title2 {
+  position: relative;
+}
+
+/* ========== 标签导航 ========== */
+.p2_title2 .p2_nav {
+  padding: 0;
+  margin: 0.98rem 0 0 5.5rem;
+  background: none;
+  display: flex;
+  align-items: center;
+  height: 0.7rem;
+}
+
+.p2_nav {
+  width: 17.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 0.7rem;
+  margin-top: 0.9rem;
+  padding: 0 1.5rem;
+  background: url(../../assets/p2_newli.png) no-repeat bottom/100% auto;
+  box-sizing: border-box;
+}
+
+/* ========== 标签项 ========== */
+.p2_tab {
+  position: relative;
+  color: #e8ebeb;
+  font-size: 0.4rem;
+  margin: 0 0.2rem -0.03rem;
+  padding: 0 0.3rem 0.05rem;
+  border-bottom: 0.01rem solid rgb(15 247 150 / 0%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.p2_title2 .p2_nav .p2_tab {
+  margin-bottom: -0.01rem;
+}
+
+.p2_tab:hover,
+.p2_tab.on {
+  color: #0ff796;
+  border-bottom: 0.01rem solid #0ff796;
+}
+
+/* 激活/Hover状态的装饰 */
+.p2_tab:hover::before,
+.p2_tab:hover::after,
+.p2_tab.on::before,
+.p2_tab.on::after {
+  content: "";
+  position: absolute;
+  width: 0.03rem;
+  height: 0.01rem;
+  background-color: #0ff796;
+  bottom: -0.01rem;
+}
+
+.p2_tab::before {
+  left: -0.06rem;
+}
+
+.p2_tab::after {
+  right: -0.06rem;
+}
+
+/* ========== 内容区域 ========== */
+.df-tabs__content {
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  background: rgba(0, 0, 0, 0.3);
+  min-height: 1.5rem;
+}
+
+/* ========== 响应式 - Medium (<=1024px) ========== */
+html.medium .p2_tab {
+  font-size: 0.36rem;
+  padding: 0 0.24rem 0.1rem;
+}
+
+html.medium .p2_nav {
+  width: 9.15rem;
+  margin-top: 0.4rem;
+  padding: 0 0.4rem;
+}
+
+html.medium .p2_title2 .p2_tab {
+  padding: 0 0.15rem 0.06rem;
+}
+
+html.medium .p2_title2 .p2_nav {
+  padding: 0;
+  margin-top: 0.28rem;
+  margin-left: 3.7rem;
+}
+
+/* ========== 响应式 - Small (<=750px) ========== */
+html.small .p2_tab {
+  font-size: 0.3rem;
+  padding: 0 0.1rem;
+  margin: 0 0.1rem;
+}
+
+html.small .p2_title2 .p2_nav {
+  height: 0.41rem;
+  margin-left: 0;
+  margin-top: 1rem;
+  justify-content: space-between;
+  background: url(../../assets/p2_newli.png) no-repeat bottom / 100% auto;
+  padding: 0 0.3rem 0;
+  width: 100%;
+}
+
+html.small .p2_nav {
+  margin-left: 0;
+  margin-top: 5.2rem;
+  justify-content: space-between;
+}
+
+html.small .df-tabs__content {
+  margin-top: 0.24rem;
+  padding: 0.24rem;
+}

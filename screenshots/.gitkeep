@@ -1,0 +1,7 @@
+# 截图目录
+
+将组件截图放置在此目录下，建议命名规范：
+- button.png - 按钮组件
+- pagination.png - 分页组件
+- modal.png - 模态框组件
+- overview.png - 整体预览

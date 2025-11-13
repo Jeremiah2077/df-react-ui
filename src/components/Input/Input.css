@@ -1,0 +1,83 @@
+/**
+ * Input 输入框组件样式
+ * 完全复刻《三角洲行动》官网输入框样式
+ */
+
+/* ========== 输入框容器 ========== */
+.pop3_con {
+  position: relative;
+  display: inline-block;
+}
+
+/* ========== 输入框基础样式 ========== */
+.df-input {
+  background-color: #0b0f0f;
+  border: 0.01rem solid #353434;
+  width: 5.5rem;
+  height: 0.5rem;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  font-size: 0.2rem;
+  color: #5b5b5b;
+  margin-bottom: 0.1rem;
+  padding-left: 0.15rem;
+  transition: border-color 0.3s ease;
+}
+
+/* ========== Focus 状态 ========== */
+.df-input:focus {
+  border-color: #0ff796;
+  color: #e1e1e1;
+}
+
+/* ========== Placeholder 样式 ========== */
+.df-input::placeholder {
+  color: #5b5b5b;
+}
+
+.df-input:focus::placeholder {
+  color: #353434;
+}
+
+/* ========== 验证码输入框 ========== */
+.df-input.pop_codebox {
+  width: 4rem;
+}
+
+/* ========== 隐藏number类型的上下箭头 ========== */
+.df-input[type="number"]::-webkit-inner-spin-button,
+.df-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.df-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ========== 响应式 - Medium (<=1024px) ========== */
+html.medium .df-input {
+  font-size: 0.16rem;
+  height: 0.4rem;
+  width: 4.4rem;
+}
+
+html.medium .df-input.pop_codebox {
+  width: 3.2rem;
+}
+
+/* ========== 响应式 - Small (<=750px) ========== */
+html.small .df-input {
+  font-size: 0.18rem;
+  height: 0.45rem;
+  width: 100%;
+  max-width: 5.5rem;
+}
+
+html.small .df-input.pop_codebox {
+  width: 100%;
+  max-width: 4rem;
+}

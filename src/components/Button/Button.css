@@ -1,0 +1,108 @@
+/**
+ * Button 组件样式
+ * 完全复刻《三角洲行动》官网按钮样式
+ */
+
+/* ========== 下载按钮 (down_btn) ========== */
+.down_btn {
+  background: url(../../assets/nav_btn.jpg) no-repeat center/100%;
+  width: 5.25rem;
+  height: 1.4rem;
+  text-align: center;
+  line-height: 1.4rem;
+  color: #000;
+  position: relative;
+  font-size: 0.4rem;
+  font-family: "p-bold", sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.down_btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.down_btn:active {
+  transform: translateY(0);
+}
+
+.down_btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========== 弹窗按钮 (pop_btn) ========== */
+.pop_btn {
+  background: url(../../assets/pop_btn.png) no-repeat center/100%;
+  width: 1.86rem;
+  height: 0.37rem;
+  line-height: 0.4rem;
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 0.14rem;
+  display: inline-block;
+  font-family: "p-bold", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.pop_btn:hover {
+  opacity: 0.8;
+}
+
+.pop_btn:active {
+  opacity: 0.6;
+}
+
+.pop_btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========== 加载状态 ========== */
+.down_btn.loading,
+.pop_btn.loading {
+  opacity: 0.6;
+  cursor: wait;
+  pointer-events: none;
+}
+
+/* ========== 响应式 - Medium (<=1024px) ========== */
+html.medium .down_btn {
+  width: 4.2rem;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  font-size: 0.32rem;
+}
+
+html.medium .pop_btn {
+  width: 1.49rem;
+  height: 0.30rem;
+  line-height: 0.32rem;
+  font-size: 0.11rem;
+}
+
+/* ========== 响应式 - Small (<=750px) ========== */
+html.small .down_btn {
+  width: 3.36rem;
+  height: 0.90rem;
+  line-height: 0.90rem;
+  font-size: 0.26rem;
+}
+
+html.small .pop_btn {
+  width: 1.19rem;
+  height: 0.24rem;
+  line-height: 0.26rem;
+  font-size: 0.09rem;
+}
