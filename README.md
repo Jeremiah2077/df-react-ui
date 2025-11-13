@@ -236,38 +236,6 @@ npm run dev
 npm run build
 ```
 
-### 📸 添加截图
-
-为了让 README 中的截图正常显示，请按以下步骤操作：
-
-1. **启动开发服务器**
-   ```bash
-   npm run dev
-   ```
-
-2. **访问本地地址** (通常是 `http://localhost:5173`)
-
-3. **拍摄截图**
-   - `overview.png` - 整体页面截图（建议 1600x900）
-   - `button.png` - 按钮组件展示（建议 800x400）
-   - `pagination.png` - 分页组件展示（建议 800x400）
-   - `modal.png` - 模态框组件展示（建议 1200x800）
-
-4. **保存到正确位置**
-   ```bash
-   # 将截图保存到 screenshots 目录
-   screenshots/
-   ├── overview.png
-   ├── button.png
-   ├── pagination.png
-   └── modal.png
-   ```
-
-**截图建议：**
-- 使用深色背景以展示荧光绿效果
-- 确保组件处于不同状态（hover、active、disabled）
-- 分辨率建议使用 2x (Retina) 以获得清晰效果
-- 可使用浏览器开发者工具的设备模式进行统一尺寸截图
 
 ## 📝 许可证
 
